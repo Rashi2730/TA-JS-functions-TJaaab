@@ -7,8 +7,6 @@ function sayHello(name)
   alert(`Hello ${name}!`);
 }
 
-sayHello("Rashi");
-sayHello("Kartik");
 
 
 /*
@@ -28,9 +26,6 @@ function getFullName (firstName, lastName)
 }
 
 
-let name1 = getFullName("Rashi", "Israni");
-let name2 = getFullName("John", "Brown");
-
 
 /*
 3. Create a function named `addTwoNumbers` that accepts two numbers i.e `firstNum` and `secondNum` and returns
@@ -45,11 +40,14 @@ addTwoNumbers(10, "100"); // Alert Enter Valid Input
 
 function addTwoNumbers (firstNum, secondNum)
 {
-  return firstNum + secondNum;
+  if(typeof firstNum !== 'number' || typeof secondNum !== 'number')
+  {
+    alert(`Enter valid input`);
+  }
+  else {
+    return firstNum + secondNum;
+  }
 }
-
-let sum1 = addTwoNumbers(10,22);
-let sum2 = addTwoNumbers(23, "44");
 
 /*
 4. Create a function named `calc` which accepts three parameter `numA`, `numB` and `operation`. Operation
@@ -65,6 +63,11 @@ calc(20, 10, 'mul'); // 200
 
 function calc(numA, numB, operation)
 {
+  if(typeof numA !== 'number' || typeof numB !== 'number')
+  {
+    alert(`Enter valid input`);
+  }
+  else {
   switch(operation)
   {
     case 'add' :
@@ -81,10 +84,7 @@ function calc(numA, numB, operation)
       break;
   }
 }
-
-let calculn1 = calc(10, 20, 'mul');
-let calculn2 = calc(30, 22, 'sub');
-
+}
 
 /*
 5. Create a function named `isLeapYear` that accepts a number data type and return `true` or `false` based
@@ -96,17 +96,10 @@ isLeapYear(2001); // false
 
 function isLeapYear(year)
 {
-  if(year%4 === 0)
-  {
-    return true;
-  }
-  else {
-    return false;
-  }
+  if(year % 400 === 0) return true;
+  else if(year % 100 === 0) return false;
+  return year % 4 === 0;
 }
-
-let year1 = isLeapYear(1996);
-let year2 = isLeapYear(5311);
 
 
 /*
@@ -123,6 +116,4 @@ function getFactorial(num)
    return factNum;
 }
 
-
-let factorial1 = getFactorial(8);
 
