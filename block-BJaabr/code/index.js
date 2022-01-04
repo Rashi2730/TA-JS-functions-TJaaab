@@ -42,14 +42,25 @@ Do the following with above problem.
 
 // - Write a Function Declaration
 
+function addOne(num){
+  return(num+1);
+}
+
 // - Write a Function Expression
 
+let addOne =  function(num) {
+  return (num+1);
+}
+
 // - Write an Arrow Function without curly brackets(if possible)
+
+let addOne = (num) => (num+1);
 
 // - Write an Arrow Function with curly brackets
 
 // - Execute the function
 
+addOne(12);
 // - Execute the function and store the return value in a variable.
 
 // - What is the typeof returnValue
