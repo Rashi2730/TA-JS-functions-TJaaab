@@ -33,7 +33,7 @@ isInRange(1, 10, 19); // false
 // - Write a Function Decleration for above problem
 function isInRange(lower, upper, num) {
   // Your code
-  if(num>=lower && num <= upper) return true;
+  if(num > lower && num < upper) return true;
   else return false;
 }
 // - Execute the function with required parameter
@@ -102,12 +102,13 @@ Twist is when user passes anything other than number, or string value you should
 
 function sum(numA, numB) {
   // Your code
-  if(typeof numA && typeof numB  ===  ){
-    let sumOfNum = 0 ;
-    sumOfNum = numA + numB 
-    
-    
-
+  if(typeof numA == "number" && typeof numB  == "number"  ){    
+    return numA + numB;
+  }
+  else if(typeof numA == "string" && typeof numB  == "string"  ) {
+    return numA + " " + numB;
+  } else {
+    alert(`Enter valid values`);
   }
 }
 
